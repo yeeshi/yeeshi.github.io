@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+html {
+ background-color: #383636;
+}
+table { 
+ margin: auto;
+ margin-top: 10%;
+}
+table td {
+ font-size: 18px;
+ width: 10px;
+ height: 10px;
+ padding:8px; 
+ text-align: center; 
+ background: #999966; 
+}
+
+</style>
+</head>
+<body>
+<table id="pixelCanvas"></table>
+</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+ </script>
+<script>
+function makeGrid() {
+var squares = 13;
+$("#pixelCanvas").empty();
+  
+for (var i = 0; i < 1; i++) {        
+ var row = $('<tr></tr>'); 
+ for (var j = 0; j < squares; j++) {
+  var random = Math.floor((Math.random() * 100) + 1);
+  if(i == (squares-1)/2 && j == (squares+1)/2) {
+   cell.css('background', 'black');
+  }
+  var cell = $('<td>'+random+'</td>');
+  row.append(cell);
+ }
+    $("#pixelCanvas").append(row);
+  }
+}
+
+makeGrid();
+</script>
